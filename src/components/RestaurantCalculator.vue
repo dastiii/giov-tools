@@ -13,18 +13,17 @@
     <div class="my-12 w-1/2 mx-auto">
       <div v-if="product && quantity">
         <h4 class="text-2xl text-center tracking-wide text-gray-100 mb-8" v-text="`${quantity}x ${product.name}`"></h4>
-        <ingredient v-for="ingredient in product.ingredients" :key="ingredient[0]" :product-name="ingredient[0]" :quantity="(quantity / product.per_production) * ingredient[1]" :depth="0"></ingredient>
+        <ingredient v-for="ingredient in product.ingredients" :key="ingredient[0]" :product-name="ingredient[0]" :quantity="(quantity / (product.per_production)) * ingredient[1]" :depth="0"></ingredient>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import database from "../data.js";
+import * as database from "../data.json";
 import Ingredient from './Ingredient.vue';
 
 export default {
-  name: "HelloWorld",
   components: {
     Ingredient,
   },
@@ -33,7 +32,7 @@ export default {
   },
 
   created() {
-    this.database = database;
+    this.database = database.default;
   },
 
   data() {

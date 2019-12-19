@@ -1,11 +1,13 @@
 <template>
   <div>
-    <ul class="even:bg-gray-100 odd:bg-gray-200" :class="totalDepthClass">
+    <ul class="bg-transparant my-1" :class="[totalDepthClass, depth === 0 ? 'mb-8' : '']">
       <li
-        class="bg-gray-900 p-4 text-lg text-gray-100"
+        class="p-4 text-lg text-gray-100 bg-gray-900"
+        :class="`opacity-${ 100 - (depth * 25)}`"
         v-text="
-          `${quantity}x
+          `${Math.ceil(quantity)}x
           ${productName}
+          ${realQuantity}
           `
         "
       ></li>
@@ -23,7 +25,7 @@
 </template>
 
 <script>
-import database from "../data";
+import * as database from "../data.json";
 import Ingredient from "./Ingredient.vue";
 
 export default {
@@ -34,7 +36,7 @@ export default {
   },
 
   created() {
-    this.database = database;
+    this.database = database.default;
     this.product = this.findProduct(this.productName) ?? null;
   },
 
@@ -64,10 +66,18 @@ export default {
   computed: {
     totalDepthClass() {
       if (! this.depth) {
-        return 'ml-4';
+        return '';
       }
 
-      return 'ml-' + this.depth * 4;
+      return 'ml-' + this.depth * 8;
+    },
+
+    realQuantity() {
+      if (this.quantity === Math.ceil(this.quantity)) {
+        return '';
+      }
+
+      return '('+this.quantity.toFixed(3)+')';
     }
   },
 

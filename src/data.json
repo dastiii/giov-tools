@@ -1,0 +1,68 @@
+{
+    "products": [
+        {
+            "name": "Donut",
+            "per_production": 5,
+            "surplus": 0.2,
+            "ingredients": [
+                ["Packung Zucker", 1],
+                ["Packung Mehl", 1],
+                ["Liter Wasser", 1]
+            ]
+        },
+        {
+            "name": "Packung Zucker",
+            "per_production": 1,
+            "surplus": 0,
+            "ingredients": [
+                ["Bündel Zuckerrohr", 3],
+                ["Rolle Pappe", 1]
+            ]
+        },
+        {
+            "name": "Packung Mehl",
+            "per_production": 1,
+            "surplus": 0,
+            "ingredients": [
+                ["Weizenballen", 3],
+                ["Rolle Pappe", 1]
+            ]
+        },
+        {
+            "name": "Rolle Pappe",
+            "per_production": 100,
+            "surplus": 0,
+            "ingredients": [
+                ["Baumstamm", 1]
+            ]
+        },
+        {
+            "name": "Liter Wasser",
+            "per_production": 1,
+            "surplus": 0,
+            "ingredients": [
+                ["Liter dreckiges Wasser", 1]
+            ]
+        },
+        {
+            "name": "Becher Kaffee",
+            "per_production": 3,
+            "surplus": 0,
+            "ingredients": [
+                ["Packung Kaffeepulver", 1],
+                ["Liter Wasser", 1],
+                ["Rolle Pappe", 1]
+            ]
+        },
+        {
+            "name": "Becher Kakao",
+            "per_production": 3,
+            "surplus": 0,
+            "ingredients": [
+                ["Packung Kakaopulver", 1],
+                ["Packung Milch", 1],
+                ["Rolle Pappe", 1]
+            ]
+        }
+    ]
+}
