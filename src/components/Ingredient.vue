@@ -1,6 +1,12 @@
 <template>
   <div>
     <ul class="bg-transparant my-1" :class="[totalDepthClass, depth === 0 ? 'mb-8' : '']">
+      <!-- <li class="p-4 text-lg text-gray-100 bg-gray-900">
+        <span class="mr-1" v-text="`${Math.ceil(quantity)}x`"></span>
+        <span class="mr-1" v-text="productName"></span>
+        <span class="mr-1" v-if="realQuantity" v-text="`(${realQuantity})`"></span>
+        <span class="mr-1" v-if="surplus" v-text="`(${(100 * product.surplus)}% Überschuss)`"></span>
+      </li> -->
       <li
         class="p-4 text-lg text-gray-100 bg-gray-900"
         :class="`opacity-${ 100 - (depth * 25)}`"
@@ -16,8 +22,9 @@
           v-for="ingredient in product.ingredients"
           :key="ingredient[0]"
           :product-name="ingredient[0]"
-          :quantity="(quantity / product.per_production) * ingredient[1]"
+          :quantity="calcQuantity(ingredient[1])"
           :depth="depth + 1"
+          :surplus="surplus"
         ></ingredient>
       </li>
     </ul>
@@ -57,6 +64,11 @@ export default {
       required: true
     },
 
+    surplus: {
+      type: Boolean,
+      required: true,
+    },
+
     depth: {
       type: Number,
       required: true,
@@ -78,12 +90,20 @@ export default {
       }
 
       return '('+this.quantity.toFixed(3)+')';
-    }
+    },
   },
 
   methods: {
     findProduct(name) {
       return this.database.products.find(el => el.name === name);
+    },
+
+    calcQuantity(quantity) {
+      if (this.surplus) {
+        return (this.quantity / (this.product.per_production * (1 + this.product.surplus))) * quantity;
+      }
+
+      return (this.quantity / this.product.per_production) * quantity;
     }
   }
 };

@@ -13,7 +13,7 @@
         {
             "name": "Packung Zucker",
             "per_production": 1,
-            "surplus": 0,
+            "surplus": 0.5,
             "ingredients": [
                 ["Bündel Zuckerrohr", 3],
                 ["Rolle Pappe", 1]

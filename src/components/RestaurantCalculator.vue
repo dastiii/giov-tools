@@ -9,11 +9,18 @@
       </select>
     </div>
 
+    <div class="w-1/2 mx-auto text-gray-100 text-lg text-center my-4">
+      Überschuss einrechnen? <input type="checkbox" v-model="surplus">
+    </div>
+
 
     <div class="my-12 w-1/2 mx-auto">
       <div v-if="product && quantity">
-        <h4 class="text-2xl text-center tracking-wide text-gray-100 mb-8" v-text="`${quantity}x ${product.name}`"></h4>
-        <ingredient v-for="ingredient in product.ingredients" :key="ingredient[0]" :product-name="ingredient[0]" :quantity="(quantity / (product.per_production)) * ingredient[1]" :depth="0"></ingredient>
+        <h4 class="text-2xl text-center tracking-wide text-gray-100" v-text="`${quantity}x ${product.name}`"></h4>
+        <h5 v-if="surplus" class="text-center text-gray-800 text-xl" v-text="`${product.surplus * 100}% Überschuss eingerechnet`"></h5>
+        <div class="mt-8">
+          <ingredient v-for="ingredient in product.ingredients" :key="ingredient[0]" :product-name="ingredient[0]" :quantity="calcQuantity(ingredient[1])" :surplus="surplus" :depth="0"></ingredient>
+        </div>
       </div>
     </div>
   </div>
@@ -39,12 +46,21 @@ export default {
     return {
       product: null,
       quantity: 1,
+      surplus: false,
     };
   },
 
   methods: {
     findProduct(name) {
       return this.database.products.find(el => el.name === name);
+    },
+
+    calcQuantity(quantity) {
+      if (this.surplus) {
+        return Math.ceil((this.quantity / (this.product.per_production * (1 + this.product.surplus))) * quantity);
+      }
+
+      return (this.quantity / this.product.per_production) * quantity;
     }
   }
 };
