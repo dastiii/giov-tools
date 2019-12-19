@@ -3,7 +3,7 @@
         {
             "name": "Donut",
             "per_production": 5,
-            "surplus": 0.2,
+            "surplus": -0.2,
             "ingredients": [
                 ["Packung Zucker", 1],
                 ["Packung Mehl", 1],
