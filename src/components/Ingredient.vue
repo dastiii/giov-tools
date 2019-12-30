@@ -13,7 +13,6 @@
         v-text="
           `${Math.ceil(quantity)}x
           ${productName}
-          ${realQuantity}
           `
         "
       ></li>
@@ -100,10 +99,10 @@ export default {
 
     calcQuantity(quantity) {
       if (this.surplus) {
-        return (this.quantity / (this.product.per_production * (1 + this.product.surplus))) * quantity;
+        return Math.ceil((this.quantity / (this.product.per_production * (1 + this.product.surplus))) * quantity);
       }
 
-      return (this.quantity / this.product.per_production) * quantity;
+      return Math.ceil((this.quantity / this.product.per_production) * quantity);
     }
   }
 };

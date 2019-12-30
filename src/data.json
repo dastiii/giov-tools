@@ -3,7 +3,7 @@
         {
             "name": "Donut",
             "per_production": 5,
-            "surplus": -0.2,
+            "surplus": 0,
             "ingredients": [
                 ["Packung Zucker", 1],
                 ["Packung Mehl", 1],
@@ -13,7 +13,7 @@
         {
             "name": "Packung Zucker",
             "per_production": 1,
-            "surplus": 0.5,
+            "surplus": 0,
             "ingredients": [
                 ["Bündel Zuckerrohr", 3],
                 ["Rolle Pappe", 1]
@@ -62,6 +62,204 @@
                 ["Packung Kakaopulver", 1],
                 ["Packung Milch", 1],
                 ["Rolle Pappe", 1]
+            ]
+        },
+        {
+            "name": "Flasche Wasser",
+            "per_production": 6,
+            "surplus": 0,
+            "ingredients": [
+                ["Kiste Wasser", 1]
+            ]
+        },
+        {
+            "name": "Brötchen",
+            "per_production": 25,
+            "surplus": 0,
+            "ingredients": [
+                ["Hefeteig", 1],
+                ["Packung Milch", 1],
+                ["Packung Eier", 1]
+            ]
+        },
+        {
+            "name": "Schokoriegel",
+            "per_production": 10,
+            "surplus": 0,
+            "ingredients": [
+                ["Packung Kakaopulver", 1],
+                ["Packung Mehl", 1],
+                ["Packung Milch", 1],
+                ["Sack Kunststoffgranulat", 1]
+            ]
+        },
+        {
+            "name": "Fischburger",
+            "per_production": 4,
+            "surplus": 0,
+            "ingredients": [
+                ["Verpacktes Lachsfilet", 1],
+                ["Packung Salat", 1],
+                ["Packung Gurken", 1],
+                ["Packung Tomaten", 1],
+                ["Brötchen", 4]
+            ]
+        },
+        {
+            "name": "V Burger",
+            "per_production": 4,
+            "surplus": 0,
+            "ingredients": [
+                ["Rinderfleisch verpackt", 2],
+                ["Packung Salat", 1],
+                ["Packung Gurken", 1],
+                ["Packung Tomaten", 1],
+                ["Brötchen", 4]
+            ]
+        },
+        {
+            "name": "Chickenburger",
+            "per_production": 4,
+            "surplus": 0,
+            "ingredients": [
+                ["Verpackte Hühnerschenkel", 2],
+                ["Packung Salat", 1],
+                ["Packung Gurken", 1],
+                ["Packung Tomaten", 1],
+                ["Brötchen", 4]
+            ]
+        },
+        {
+            "name": "Flasche Champagner",
+            "per_production": 1,
+            "surplus": 0,
+            "ingredients": [
+                ["Verpackter Champagner", 1]
+            ]
+        },
+        {
+            "name": "Berliner",
+            "per_production": 10,
+            "surplus": 0,
+            "ingredients": [
+                ["Packung Zucker", 2],
+                ["Packung Mehl", 1],
+                ["Liter Wasser", 1]
+            ]
+        },
+        {
+            "name": "Brezn",
+            "per_production": 5,
+            "surplus": 0,
+            "ingredients": [
+                ["Packung Salz", 1],
+                ["Liter Wasser", 1],
+                ["Packung Mehl", 1]
+            ]
+        },
+        {
+            "name": "Frankenstein",
+            "per_production": 6,
+            "surplus": 0,
+            "ingredients": [
+                ["Flasche Gin", 1],
+                ["Flasche Weißwein", 1],
+                ["Packung Zucker", 1]
+            ]
+        },
+        {
+            "name": "Mariniertes Thunfischsteak",
+            "per_production": 2,
+            "surplus": 0,
+            "ingredients": [
+                ["Packung Salz", 1],
+                ["Bündel Kräuter", 1],
+                ["Gekühlter Thunfisch", 1]
+            ]
+        },
+        {
+            "name": "Trauben Wassereis",
+            "per_production": 5,
+            "surplus": 0,
+            "ingredients": [
+                ["Liter Wasser", 1],
+                ["Trauben Sirup", 1]
+            ]
+        },
+        {
+            "name": "Cookie Wassereis",
+            "per_production": 5,
+            "surplus": 0,
+            "ingredients": [
+                ["Liter Wasser", 1],
+                ["Cookie Sirup", 1]
+            ]
+        },
+        {
+            "name": "Milchreis",
+            "per_production": 3,
+            "surplus": 0,
+            "ingredients": [
+                ["Packung Zucker", 1],
+                ["Packung Reis", 1],
+                ["Packung Milch", 1]
+            ]
+        },
+        {
+            "name": "Frische Seefood Platte",
+            "per_production": 1,
+            "surplus": 0,
+            "ingredients": [
+                ["Hummer", 1],
+                ["Verpacktes Forellenfilet", 1],
+                ["Gekühlter kleiner Stachelrochen", 1],
+                ["Verpackter Aal", 1],
+                ["Verpackter Seehecht", 1],
+                ["Packung Salz", 1]
+            ]
+        },
+        {
+            "name": "Tasse Glühwein",
+            "per_production": 1,
+            "surplus": 0,
+            "ingredients": [
+                ["Zimt", 1],
+                ["Nelken", 1],
+                ["Sternanis", 1],
+                ["Packung Zucker", 1],
+                ["Netz Orangen", 1],
+                ["Kiste Rotwein", 1]
+            ]
+        },
+        {
+            "name": "Bratwurst im Brötchen",
+            "per_production": 10,
+            "surplus": 0,
+            "ingredients": [
+                ["Brötchen", 10],
+                ["Rostbratwurst roh verpackt", 5],
+                ["Bündel Kräuter", 1],
+                ["Packung Salz", 1]
+            ]
+        },
+        {
+            "name": "Glasierter Apfel",
+            "per_production": 2,
+            "surplus": 0,
+            "ingredients": [
+                ["Apfel", 2],
+                ["Packung Zucker", 2]
+            ]
+        },
+        {
+            "name": "Crepes mit Schokocreme",
+            "per_production": 10,
+            "surplus": 0,
+            "ingredients": [
+                ["Packung Mehl", 1],
+                ["Packung Kakaopulver", 1],
+                ["Kanne Milch", 1],
+                ["Packung Zucker", 1]
             ]
         }
     ]

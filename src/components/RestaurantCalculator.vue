@@ -10,7 +10,7 @@
     </div>
 
     <div class="w-1/2 mx-auto text-gray-100 text-lg text-center my-4">
-      Überschuss einrechnen? <input type="checkbox" v-model="surplus">
+      Alle Überschüsse einrechnen? <input type="checkbox" v-model="surplus">
     </div>
 
 
@@ -60,7 +60,7 @@ export default {
         return Math.ceil((this.quantity / (this.product.per_production * (1 + this.product.surplus))) * quantity);
       }
 
-      return (this.quantity / this.product.per_production) * quantity;
+      return Math.ceil((this.quantity / this.product.per_production) * quantity);
     }
   }
 };
@@ -68,18 +68,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 </style>

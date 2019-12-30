@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="container mx-auto my-4">
-      <h1 class="font-brand text-brand text-5xl">
+      <h1 class="font-brand text-center text-brand text-5xl">
         GioV
         <span class="text-3xl text-white">Dein Lieblingsrestaurant.</span>
       </h1>
