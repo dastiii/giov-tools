@@ -3,6 +3,7 @@
         {
             "name": "Donut",
             "per_production": 5,
+            "max_per_production": 830,
             "surplus": 0,
             "ingredients": [
                 ["Packung Zucker", 1],
@@ -29,24 +30,9 @@
             ]
         },
         {
-            "name": "Rolle Pappe",
-            "per_production": 100,
-            "surplus": 0,
-            "ingredients": [
-                ["Baumstamm", 1]
-            ]
-        },
-        {
-            "name": "Liter Wasser",
-            "per_production": 1,
-            "surplus": 0,
-            "ingredients": [
-                ["Liter dreckiges Wasser", 1]
-            ]
-        },
-        {
             "name": "Becher Kaffee",
             "per_production": 3,
+            "max_per_production": 714,
             "surplus": 0,
             "ingredients": [
                 ["Packung Kaffeepulver", 1],
@@ -57,6 +43,7 @@
         {
             "name": "Becher Kakao",
             "per_production": 3,
+            "max_per_production": 600,
             "surplus": 0,
             "ingredients": [
                 ["Packung Kakaopulver", 1],
@@ -85,6 +72,7 @@
         {
             "name": "Schokoriegel",
             "per_production": 10,
+            "max_per_production": 1720,
             "surplus": 0,
             "ingredients": [
                 ["Packung Kakaopulver", 1],
@@ -108,6 +96,7 @@
         {
             "name": "V Burger",
             "per_production": 4,
+            "max_per_production": 334,
             "surplus": 0,
             "ingredients": [
                 ["Rinderfleisch verpackt", 2],
@@ -170,6 +159,7 @@
         {
             "name": "Mariniertes Thunfischsteak",
             "per_production": 2,
+            "max_per_production": 322,
             "surplus": 0,
             "ingredients": [
                 ["Packung Salz", 1],
@@ -245,6 +235,7 @@
         {
             "name": "Glasierter Apfel",
             "per_production": 2,
+            "max_per_production": 226,
             "surplus": 0,
             "ingredients": [
                 ["Apfel", 2],
@@ -265,6 +256,7 @@
         {
             "name": "Schweineschnitzel mit Panade und Pommes Frites",
             "per_production": 4,
+            "max_per_production": 688,
             "surplus": 0,
             "ingredients": [
                 ["Schweineschnitzel mit Panade roh verpackt", 4],
@@ -331,6 +323,7 @@
         {
             "name": "Dose Red BuV",
             "per_production": 3,
+            "max_per_production": 447,
             "surplus": 0,
             "ingredients": [
                 ["Packung Zucker", 2],
@@ -355,6 +348,7 @@
         {
             "name": "Hotdog",
             "per_production": 10,
+            "max_per_production": 200,
             "surplus": 0,
             "ingredients": [
                 ["Brötchen", 10],
@@ -377,6 +371,7 @@
         {
             "name": "Gulasch",
             "per_production": 3,
+            "max_per_production": 483,
             "surplus": 0,
             "ingredients": [
                 ["Rinderfleisch verpackt", 2],
@@ -387,6 +382,7 @@
         {
             "name": "Tagliatelle mit Lachs in Tomaten-Sahne-Soße",
             "per_production": 4,
+            "max_per_production": 712,
             "surplus": 0,
             "ingredients": [
                 ["Verpackte Nudeln", 1],
@@ -398,6 +394,7 @@
         {
             "name": "Nudelgratin",
             "per_production": 2,
+            "max_per_production": 416,
             "surplus": 0,
             "ingredients": [
                 ["Verpackte Nudeln", 1],
@@ -409,6 +406,7 @@
         {
             "name": "State Salat",
             "per_production": 4,
+            "max_per_production": 500,
             "surplus": 2,
             "ingredients": [
                 ["Packung Salat", 1],
@@ -452,6 +450,7 @@
         {
             "name": "Pizza Tonno",
             "per_production": 2,
+            "max_per_production": 230,
             "surplus": 0,
             "ingredients": [
                 ["Hefeteig", 1],
@@ -623,6 +622,7 @@
         {
             "name": "Döner",
             "per_production": 4,
+            "max_per_production": 276,
             "surplus": 0,
             "ingredients": [
                 ["Rinderfleisch verpackt", 2],
@@ -781,6 +781,7 @@
         {
             "name": "Fischsuppe",
             "per_production": 5,
+            "max_per_production": 625,
             "surplus": 0,
             "ingredients": [
                 ["Verpacktes Forellenfilet", 1],
@@ -825,6 +826,7 @@
         {
             "name": "Tüte Chips",
             "per_production": 5,
+            "max_per_production": 780,
             "surplus": 0,
             "ingredients": [
                 ["Netz Kartoffeln", 1],
@@ -939,6 +941,7 @@
         {
             "name": "Spareribs",
             "per_production": 4,
+            "max_per_production": 740,
             "surplus": 0,
             "ingredients": [
                 ["Spareribs roh verpackt", 1],
@@ -1011,6 +1014,7 @@
         {
             "name": "Dose Sprunk Melonpunch",
             "per_production": 3,
+            "max_per_production": 90,
             "surplus": 0,
             "ingredients": [
                 ["Packung Zucker", 1],
@@ -1045,6 +1049,17 @@
                 ["Packung Tomaten", 1],
                 ["Zwiebel", 1],
                 ["Hefeteig", 4]
+            ]
+        },
+        {
+            "name": "Forellenfilet",
+            "per_production": 2,
+            "max_per_production": 714,
+            "surplus": 0,
+            "ingredients": [
+                ["Verpacktes Forellenfilet", 1],
+                ["Packung Salz", 1],
+                ["Bündel Kräuter", 1]
             ]
         }
     ]

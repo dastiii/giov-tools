@@ -23,13 +23,17 @@
       </select> -->
     </div>
 
-    <div class="w-1/2 mx-auto text-gray-100 text-lg text-center my-4">
+    <div v-if="product && product.max_per_production" class="w-1/2 mx-auto text-gray-100 text-lg text-center my-4">
+      Volle Maschine? <input type="checkbox" v-model="max_per_production">
+    </div>
+
+    <div v-if="product && product.surplus" class="w-1/2 mx-auto text-gray-100 text-lg text-center my-4">
       Alle Überschüsse einrechnen? <input type="checkbox" v-model="surplus">
     </div>
 
 
     <div class="my-12 w-1/2 mx-auto">
-      <div v-if="product && quantity">
+      <div v-if="product && (quantity || max_per_production)">
         <h4 class="text-2xl text-center tracking-wide text-gray-100" v-text="`${calculatedQuantity}x ${product.name}`"></h4>
         <h5 v-if="surplus" class="text-center text-gray-800 text-xl" v-text="`${product.surplus * 100}% Überschuss eingerechnet`"></h5>
         <div class="mt-8">
@@ -62,7 +66,14 @@ export default {
       product: null,
       quantity: 0,
       surplus: false,
+      max_per_production: false,
     };
+  },
+
+  watch: {
+    product() {
+      this.max_per_production = false;
+    }
   },
 
   computed: {
@@ -73,6 +84,10 @@ export default {
     calculatedQuantity() {
         if (! this.product) {
           return 0;
+        }
+
+        if (this.max_per_production && this.product.max_per_production) {
+          return this.product.max_per_production;
         }
 
         let rest = parseInt(this.quantity) % this.product.per_production;
