@@ -2,7 +2,7 @@
   <div class="container mx-auto mt-24">
     <h2 class="font-brand text-gray-100 text-3xl my-12 text-center">Produktionsrechner</h2>
 
-    <div class="w-1/2 mx-auto flex">
+    <div class="w-2/3 mx-auto flex">
       <!-- <v-select
         :options="calculatedQuantities"
         v-model="quantity"
