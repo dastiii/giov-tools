@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans|PT+Mono&display=swap');
 
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
 $vs-colors: (
         lightest: theme("colors.gray.100"),
         light: theme("colors.gray.100"),
@@ -46,12 +52,6 @@ $vs-dropdown-box-shadow: 0px 3px 6px 0px map_get($vs-colors, 'darkest') !default
 $vs-dropdown-bg: theme("colors.gray.900");
 
 @import "vue-select/src/scss/vue-select.scss";
-
-@tailwind base;
-
-@tailwind components;
-
-@tailwind utilities;
 
 .v-select .vs__dropdown-option {
     color: theme("colors.gray.300");
